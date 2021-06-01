@@ -1,0 +1,106 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+:root{
+    --maincolor: whitesmoke;
+    --mainfont: font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    background-image: url(./img/covidbg.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+main{
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+}
+
+.container{
+    height: 70%;
+    width: 50%;
+    background-color: rgb(30, 167, 222);
+    margin: 6.25rem auto;
+    border-radius: 1.5rem;
+    display: flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content: center;
+}
+
+.mini_container{
+    display: flex;
+    height: 30%;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin-bottom:2rem;
+    margin-top: 2rem;
+}
+
+h1{
+    color: var(--maincolor);
+
+}
+
+label{
+    color: var(--maincolor);
+    font-weight: bold;
+    font-size: 1.3rem;
+    padding-bottom: 2rem;
+
+}
+input{
+    font-size: 1rem;
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+    border: none;
+}
+
+button{
+    border-radius: 0.5rem;
+    font-size: 1.3rem;
+    border: none;
+    padding: 0.5rem 1rem;
+    background: white;
+    color:rgb(30, 167, 222);
+    font-weight: bold;
+    transition: 0.6s all ease;
+    cursor: pointer;
+}
+
+button:hover{
+    background:red;
+}
+
+
+.list{
+    height: 50%;
+    width:70%;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-content: space-between;
+    grid-gap: 5px;
+}
+
+.rest{
+    text-align: center;
+    border: 1.5px solid white;
+    border-radius: 0.5rem;
+    padding: 5px;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+    display:flex;
+    align-items: center;
+    justify-content:center;
+}
+
