@@ -44,13 +44,13 @@ function getRandom(inputValue) {
 }
 //niech pod random będzie liczba, która będzie indeksem tablicy i wtedy return zwróci tablicę o konkretnym indeksie
 
-function addNewRest(inputValue) {
+function addNewRest() {
   const taskDiv = document.createElement("div");
-  taskDiv.textContent = getRandom(inputValue);
+  taskDiv.textContent = getRandom(input.value);
   taskDiv.classList.add("rest");
   list.appendChild(taskDiv);
   // list to nazwa klasy w której są obostrzenia. klasa to div class='list'
 }
 
 // btn.addEventListener("click", addNewRest);
-btn.addEventListener('click', addNewRest(inputValue));
+btn.addEventListener('click', addNewRest);
