@@ -1,7 +1,3 @@
-const input = document.getElementById("fnumber");
-const btn = document.getElementById("btn");
-const list = document.getElementById("list");
-let inputValue = input.value;
 
 
 const las = "lasy zostają zamknięte na dwa tygodnie";
@@ -33,11 +29,15 @@ const arrayList = [
   wybory
 ];
 
+const input = document.getElementById("fnumber");
+const btn = document.getElementById("btn");
+const list = document.getElementById("list");
+// let inputValue = input.value;
 
-function getRandom(inputValue) {
-  if (inputValue > 5000) {
+function getRandom() {
+  if (input.value > 5000) {
     let random = Math.floor(Math.random() * arrayList.length);
-    return arrayList[random];
+    return arrayList.splice(random, 1);
   } else {
     return "za mało zakażeń";
   }
@@ -46,11 +46,11 @@ function getRandom(inputValue) {
 
 function addNewRest() {
   const taskDiv = document.createElement("div");
-  taskDiv.textContent = getRandom(input.value);
+  taskDiv.textContent = getRandom();
   taskDiv.classList.add("rest");
   list.appendChild(taskDiv);
   // list to nazwa klasy w której są obostrzenia. klasa to div class='list'
 }
 
-// btn.addEventListener("click", addNewRest);
+
 btn.addEventListener('click', addNewRest);
